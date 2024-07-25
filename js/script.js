@@ -9,25 +9,24 @@ for (let i = 0; i < Numbers; i++) {
 // timer 30sec
 setTimeout(timer, 30000);
 function timer() {
-    alert(`STOP`);
+    // chiedi valori
+    insert = 5;
+    const insertNum = [];
+    for (let i = 0; i < insert; i++) {
+        const insertNum = prompt(`Inserisci valore:`);
+        console.log (`Il num inserito è:`, insertNum, typeof insertNum);
+    }
+    
+    // condizione gioco
+    if (insert == Numbers) {
+        console.log(`valore esatto:`, insertNum, typeof insertNum);
+    }
+    else {
+        console.log(`valore errato:`, insertNum, typeof insertNum);
+        alert(`HAI PERSO`);
+    }
 }
 
-// chiedi valori
-insert = 5;
-const insertNum = [];
-for (let i = 0; i < insert; i++) {
-    const insertNum = prompt(`Inserisci valore:`);
-    console.log (`Il num inserito è:`, insertNum, typeof insertNum);
-}
-
-// condizione gioco
-if (insert == Numbers) {
-    console.log(`valore esatto:`, insertNum, typeof insertNum);
-}
-else {
-    console.log(`valore errato:`, insertNum, typeof insertNum);
-    alert(`HAI PERSO`);
-}
 
 // funzione numeri random
 function generateRandomNumber(min, max) {
