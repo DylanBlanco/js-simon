@@ -14,13 +14,14 @@ function timer() {
 
 // chiedi valori
 insert = 5;
+const insertNum = [];
 for (let i = 0; i < insert; i++) {
     const insertNum = prompt(`Inserisci valore:`);
-    console.log (`Il num inserito è:`, insertNum);
+    console.log (`Il num inserito è:`, insertNum, typeof insertNum);
 }
 
 // condizione gioco
-if (insertNum == randomNumber) {
+if (insert == Numbers) {
     console.log(`valore esatto:`, insertNum, typeof insertNum);
 }
 else {
