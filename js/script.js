@@ -1,10 +1,13 @@
 // genera 5 numRandom
-Numbers = 5;
+numbers = 5;
 const randomNumber = [];
-for (let i = 0; i < Numbers; i++) {
-    const randomNumber = generateRandomNumber(1, 100);
-    console.log(`randomNumber`, randomNumber, typeof randomNumber);
+for (let i = 0; i < numbers; i++) {
+    const numbers = generateRandomNumber(1, 100);
+    console.log(`numbers`, numbers, typeof numbers);
+    randomNumber.push(numbers);
 }
+console.log(`Numeri random:`, randomNumber, typeof randomNumber);
+document.getElementById(`random-numbers`).innerHTML = randomNumber;
 
 // timer 30sec
 setTimeout(timer, 30000);
@@ -13,12 +16,13 @@ function timer() {
     insert = 5;
     const insertNum = [];
     for (let i = 0; i < insert; i++) {
-        const insertNum = prompt(`Inserisci valore:`);
-        console.log (`Il num inserito è:`, insertNum, typeof insertNum);
+        const insertNumbers = prompt(`Inserisci valore:`);
+        console.log (`Il num inserito è:`, insertNumbers, typeof insertNumbers);
+        insertNum.push(insertNumbers);
     }
     
     // condizione gioco
-    if (insert == Numbers) {
+    if (insertNum == randomNumber) {
         console.log(`valore esatto:`, insertNum, typeof insertNum);
     }
     else {

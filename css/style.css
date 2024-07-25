@@ -6,3 +6,49 @@ RESET
     padding: 0;
     box-sizing: border-box;
 }
+
+/***************
+COLOR
+***************/
+main {
+    background-color: beige;
+}
+
+/***************
+GENERAL
+***************/
+.head-container {
+    height: 50px;
+}
+main {
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+}
+.container {
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    border: 1px solid #3b3737;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.p-container {
+    border-right: 1px solid #3b3737;
+}
+.p-container, #random-numbers {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > div {
+    font-size: 2rem;
+}
+p {
+    display: flex;
+    justify-content: center;
+}
