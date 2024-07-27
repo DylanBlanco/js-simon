@@ -10,27 +10,33 @@ console.log(`Numeri random:`, randomNumber, typeof randomNumber);
 document.getElementById(`random-numbers`).innerHTML = randomNumber;
 
 // timer 30sec
-setTimeout(timer, 30000);
+setTimeout(timer, 5000);
 function timer() {
-    // chiedi valori
-    insert = 5;
-    const insertNum = [];
-    for (let i = 0; i < insert; i++) {
-        const insertNumbers = prompt(`Inserisci valore:`);
-        console.log (`Il num inserito è:`, insertNumbers, typeof insertNumbers);
-        insertNum.push(insertNumbers);
-    }
-    
-    // condizione gioco
-    if (insertNum == randomNumber) {
-        console.log(`valore esatto:`, insertNum, typeof insertNum);
-    }
-    else {
-        console.log(`valore errato:`, insertNum, typeof insertNum);
-        alert(`HAI PERSO`);
+    // nascondi numRandom
+    document.getElementById("random-numbers").style.display = "none";
+
+    // set time - condizione gioco
+    setTimeout(timer, 100);
+    function timer() {
+        // chiedi valori
+        insert = 5;
+        const insertNum = [];
+        for (let i = 0; i < insert; i++) {
+            const insertNumbers = prompt(`Inserisci valore:`);
+            console.log (`Il num inserito è:`, insertNumbers, typeof insertNumbers);
+            insertNum.push(insertNumbers);
+        }
+        
+        // condizione gioco
+        if (insertNum == randomNumber) {
+            console.log(`valore esatto:`, insertNum, typeof insertNum);
+        }
+        else {
+            console.log(`valore errato:`, insertNum, typeof insertNum);
+            alert(`HAI PERSO`);
+        }
     }
 }
-
 
 // funzione numeri random
 function generateRandomNumber(min, max) {
