@@ -10,7 +10,7 @@ console.log(`Numeri random:`, randomNumber, typeof randomNumber);
 document.getElementById(`random-numbers`).innerHTML = randomNumber;
 
 // timer 30sec
-setTimeout(timer, 5000);
+setTimeout(timer, 30000);
 function timer() {
     // nascondi numRandom
     document.getElementById("random-numbers").style.display = "none";
